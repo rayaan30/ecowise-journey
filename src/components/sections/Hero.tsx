@@ -1,5 +1,6 @@
 
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import ActionButton from "../ui/ActionButton";
 
 const Hero = () => {
@@ -23,12 +24,16 @@ const Hero = () => {
               tools and personalized insights designed for everyday life.
             </p>
             <div className="flex flex-wrap gap-4">
-              <ActionButton size="lg" withArrow>
-                Get Started
-              </ActionButton>
-              <ActionButton size="lg" variant="outline">
-                Learn More
-              </ActionButton>
+              <Link to="/signup">
+                <ActionButton size="lg" withArrow>
+                  Get Started
+                </ActionButton>
+              </Link>
+              <Link to="/login">
+                <ActionButton size="lg" variant="outline">
+                  Sign In
+                </ActionButton>
+              </Link>
             </div>
           </div>
           <div className="order-1 md:order-2 animate-fade-in-left [animation-delay:600ms]">
